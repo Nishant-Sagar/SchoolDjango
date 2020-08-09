@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!--SECTION START-->
+    <section class="c-all h-quote">
+        <div class="container">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="all-title quote-title qu-new">
+                    <h2>Request an Admission</h2>
+                    <p>Fusce purus mauris, blandit vitae purus eget, viverra volutpat nibh. Nam in elementum nisi, a placerat nisi. Quisque ullamcorper magna in odio rhoncus semper.Sed nec ultricies velit. Aliquam non massa id enim ultrices aliquet a ac
+                        tortor.</p>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <p class="help-line">Help Line <span>+010 4561 32145</span> </p> <span class="help-arrow pulse"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="n-form-com admiss-form">
+                    <div class="col s12">
+                        <form class="form-horizontal" method="POST" >
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Full Name:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'name' value = "{{name}}" type="text" class="form-control" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Father's Name:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'father_name' value = "{{father_name}}" type="text" class="form-control" placeholder="Enter your Father's name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Guardian's Name:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'guardian_name' value = "{{guardian_name}}" type="text" class="form-control" placeholder="Enter your Guardian's name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Father's Occupation:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'occupation' value = "{{occupation}}" type="text" class="form-control" placeholder="Enter your Father's Occupation" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">DOB</Address>:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'dob' value = "{{dob}}" type="date" class="form-control" placeholder="Enter your DOB">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Phone:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'phone' value = "{{phone}}" type="number" class="form-control" min="2000-01-01" max="2020-12-31" placeholder="Enter your phone number" required >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Email Id:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'email' value = "{{email}}" type="email" class="form-control" placeholder="Enter email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Your Qualification:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'qualification' value = "{{qualification}}" type="text" class="form-control" placeholder="Enter your Educational Qualification">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Your Address</Address>:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'address' value = "{{address}}" type="text" class="form-control" placeholder="Enter your Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Your City:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'city' value = "{{city}}" type="text" class="form-control" placeholder="Enter your city">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Pincode:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'pincode'  value = "{{pincode}}" type="number" class="form-control" placeholder="Enter your Pincode" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Your Religion:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'religion' value = "{{religion}}" type="text" class="form-control" placeholder="Enter your Religion">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Sex:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'sex' value = "{{sex}}"  type="text" class="form-control" placeholder="Male/Female">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Nationality:</label>
+                                <div class="col-sm-9">
+                                    <input name = 'nationality' value = "{{nationality}}" type="text" class="form-control" placeholder="Indian/NRI">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="form-group mar-bot-0">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <i class="waves-effect waves-light light-btn waves-input-wrapper" style=""><input type="submit" value="Submit" class="waves-button-input"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--SECTION END-->
+
+
+    <!--SECTION START-->
+{% endblock %}
